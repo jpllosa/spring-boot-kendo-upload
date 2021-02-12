@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Kendo Upload with Spring Boot</title>
+	<link rel="stylesheet" href="https://kendo.cdn.telerik.com/2021.1.119/styles/kendo.default-v2.min.css"/>
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://kendo.cdn.telerik.com/2021.1.119/js/kendo.all.min.js"></script>
+</head>
+<body>
+	<div>
+    	<input name="files" id="files" type="file" />
+	</div>
+
+<script>
+$(document).ready(function() {
+	$("#files").kendoUpload({
+		async: {
+			saveUrl: "/",
+			autoUpload: false,
+		},
+		upload: function(e) {
+			console.time("Upload process");
+		},
+		complete: function(e) {
+			console.timeEnd("Upload process");
+		},
+		success: function(e) {
+			var xhr = e.XMLHttpRequest;
+			console.group("Upload done");
+			console.log(xhr.status);
+			console.groupEnd();
+		},
+		error: function(e) {
+			var xhr = e.XMLHttpRequest;
+			console.group("Upload error");
+			console.log(xhr.status);
+			console.groupEnd();
+		},
+	});
+});
+</script>
+</body>
+</html>
