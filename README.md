@@ -1,4 +1,4 @@
 # spring-boot-kendo-upload
-Demo project for [Kendo Upload jQuery with Spring Boot](https://jpllosa.blogspot.com/2021/02/kendo-upload-with-spring-boot-example.html)
+Demo project for [Kendo Upload jQuery with Spring Boot](https://codesamples.net/2025/08/kendo-upload-with-spring-boot-example)
 
-Check out [jpllosa.blogspot.com](https://jpllosa.blogspot.com/)
+Check out [codesamples.net](https://codesamples.net)
